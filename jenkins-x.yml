@@ -44,6 +44,9 @@ pipelineConfig:
                   - name: chart-sa
                     mountPath: /secrets/charts
             steps:
+              - name: build-and-push-image
+                command: ./build.sh
+
               - name: release-chart
                 command: make release
                 image: gcr.io/jenkinsxio-labs/helm:0.0.21
