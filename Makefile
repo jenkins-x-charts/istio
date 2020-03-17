@@ -1,8 +1,6 @@
 CHART_REPO := gs://jenkinsxio-labs/charts
 NAME := istio
 OS := $(shell uname)
-VERSION := 0.1.1
-KNATIVE_VERSION := 0.12.1
 
 CHARTMUSEUM_CREDS_USR := $(shell cat /builder/home/basic-auth-user.json)
 CHARTMUSEUM_CREDS_PSW := $(shell cat /builder/home/basic-auth-pass.json)
@@ -36,9 +34,7 @@ else ifeq ($(OS),Linux)
 else
 	exit -1
 endif
-	helm dependency build
-	helm lint
-	helm package .
+	helm package istio
 	helm repo add jx-labs $(CHART_REPO)
 	helm gcs push ${NAME}*.tgz jx-labs --public
 	rm -rf ${NAME}*.tgz%
