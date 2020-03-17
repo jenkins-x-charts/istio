@@ -20,7 +20,7 @@ spec:
         - --set
         - profile={{ .Values.profile | default "default" }}
         command:
-        - istioctl manifest apply --set profile=demo
+        - istioctl
         image: "{{ .Values.image.repository }}:{{ .Chart.Version }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: job
