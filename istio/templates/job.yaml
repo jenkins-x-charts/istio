@@ -21,7 +21,7 @@ spec:
         - profile={{ .Values.profile | default "default" }}
         command:
         - istioctl manifest apply --set profile=demo
-        image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+        image: "{{ .Values.image.repository }}:{{ .Chart.Version }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: job
       restartPolicy: Never

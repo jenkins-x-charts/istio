@@ -28,7 +28,6 @@ clean:
 release: clean build
 ifeq ($(OS),Darwin)
 	sed -i "" -e "s/version:.*/version: $(VERSION)/" istio/Chart.yaml
-
 else ifeq ($(OS),Linux)
 	sed -i -e "s/version:.*/version: $(VERSION)/" istio/Chart.yaml
 else
