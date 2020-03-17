@@ -7,10 +7,7 @@ KNATIVE_VERSION := 0.12.1
 CHARTMUSEUM_CREDS_USR := $(shell cat /builder/home/basic-auth-user.json)
 CHARTMUSEUM_CREDS_PSW := $(shell cat /builder/home/basic-auth-pass.json)
 
-init:
-	helm init --client-only
-
-setup: init
+setup:
 	helm repo add jenkinsxio http://chartmuseum.jenkins-x.io
 
 build: clean setup
