@@ -1,4 +1,4 @@
-CHART_REPO := http://jenkins-x-chartmuseum:8080
+CHART_REPO := gs://jenkinsxio-labs/charts
 NAME := istio
 OS := $(shell uname)
 VERSION := 0.1.1
@@ -36,7 +36,10 @@ else ifeq ($(OS),Linux)
 else
 	exit -1
 endif
-	helm package istio
-	curl --fail -u $(CHARTMUSEUM_CREDS_USR):$(CHARTMUSEUM_CREDS_PSW) --data-binary "@$(NAME)-$(VERSION).tgz" $(CHART_REPO)/api/charts
-	rm -rf ${NAME}*.tgz
+	helm dependency build
+	helm lint
+	helm package .
+	helm repo add jx-labs $(CHART_REPO)
+	helm gcs push ${NAME}*.tgz jx-labs --public
+	rm -rf ${NAME}*.tgz%
 
