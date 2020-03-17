@@ -50,7 +50,7 @@ pipelineConfig:
               - name: release-chart
                 command: make release
                 image: gcr.io/jenkinsxio-labs/helm:0.0.21
-                dir: /workspace/source/istio
+                dir: /workspace/source
                 env:
                   - name: GOOGLE_APPLICATION_CREDENTIALS
                     value: /secrets/charts/credentials.json
