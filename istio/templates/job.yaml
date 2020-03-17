@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  labels:
+    release: jenkins-x
+  name: {{ .Values.job.name | default "istio-job" }}
+spec:
+  backoffLimit: 5
+  completions: 1
+  parallelism: 1
+  template:
+    metadata:
+      labels:
+        release: jenkins-x
+    spec:
+      containers:
+      - args:
+        - manifest
+        - apply
+        - --set
+        - profile={{ .Values.profile | default "default" }}
+        command:
+        - istioctl manifest apply --set profile=demo
+        image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        name: job
+      restartPolicy: Never
+      serviceAccountName: {{ .Values.serviceAccount.name | default "istio-job" }}

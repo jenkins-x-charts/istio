@@ -1,0 +1,2 @@
+buildPack: docker-helm
+dockerRegistryOwner: jenkinsxio-labs
