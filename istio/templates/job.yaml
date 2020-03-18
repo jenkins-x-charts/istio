@@ -4,6 +4,10 @@ metadata:
   labels:
     release: jenkins-x
   name: {{ .Values.job.name | default "istio-job" }}
+  annotations:
+    "helm.sh/hook": post-install
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": hook-succeeded
 spec:
   backoffLimit: 5
   completions: 1
