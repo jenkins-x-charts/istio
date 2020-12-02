@@ -2,9 +2,9 @@ apiVersion: v1
 entries:
   base:
   - apiVersion: v1
-    created: "2020-12-02T11:09:19.858094711Z"
+    created: "2020-12-02T11:12:50.224917805Z"
     description: Helm chart for deploying Istio cluster resources and CRDs
-    digest: 23e367f886f4b601971edec2313b9d12f0b6f517cd4406f2f943d5fb48783c7c
+    digest: 006372545cb88d233a5727e5de9c4bfe2c03a7ba993d096a9399d2b6ff5931b5
     icon: https://istio.io/latest/favicons/android-192x192.png
     keywords:
     - istio
@@ -16,9 +16,9 @@ entries:
     version: 1.1.0
   istio-cni:
   - apiVersion: v1
-    created: "2020-12-02T11:09:19.859165007Z"
+    created: "2020-12-02T11:12:50.225463125Z"
     description: Helm chart for istio-cni components
-    digest: 4c66b141f05f8ee9614ea09e2c053d6ace06a2bb8ce69377cb9d976a1343ed31
+    digest: a31f475c112606b5cd658b045637d0525aa31d7be7423f986c31a20f4e5faf9c
     icon: https://istio.io/latest/favicons/android-192x192.png
     keywords:
     - istio-cni
@@ -32,9 +32,9 @@ entries:
   istio-discovery:
   - apiVersion: v1
     appVersion: 1.2.0
-    created: "2020-12-02T11:09:19.861607397Z"
+    created: "2020-12-02T11:12:50.227944417Z"
     description: Helm chart for istio control plane
-    digest: 7bf44ac5a50a0152be87ca9a4086bcf5248e7fa892acd9c30e16c127218d3b55
+    digest: 36982e33e10d16ea44d7b57c92ea764324005db36f4f45e53bb81fcfb62f6e8d
     icon: https://istio.io/latest/favicons/android-192x192.png
     keywords:
     - istio
@@ -48,9 +48,9 @@ entries:
     version: 1.2.0
   istio-egress:
   - apiVersion: v1
-    created: "2020-12-02T11:09:19.862953492Z"
+    created: "2020-12-02T11:12:50.229260665Z"
     description: Helm chart for deploying Istio gateways
-    digest: e971159a0be10a145285df470ccee766dc7e5c896f16228728229ed853f301a0
+    digest: c3111ec5acfdfd2ffa2ff7990f17ca010bbc2ed85cfab2cf4bc3d4435522b2d9
     icon: https://istio.io/latest/favicons/android-192x192.png
     keywords:
     - istio
@@ -64,9 +64,9 @@ entries:
     version: 1.1.0
   istio-ingress:
   - apiVersion: v1
-    created: "2020-12-02T11:09:19.864865085Z"
+    created: "2020-12-02T11:12:50.230646216Z"
     description: Helm chart for deploying Istio gateways
-    digest: 0ca385100237c3a8be3730ce88d2d0b6d2934ad73b95b5b6481027f130ffe7b3
+    digest: e50b4230655b20ee1b5391ebbabf1c6c023369c4a7a626577895681f3dbf26d0
     icon: https://istio.io/latest/favicons/android-192x192.png
     keywords:
     - istio
@@ -80,9 +80,9 @@ entries:
     version: 1.1.0
   istio-operator:
   - apiVersion: v1
-    created: "2020-12-02T11:09:19.865319084Z"
+    created: "2020-12-02T11:12:50.231100133Z"
     description: Helm chart for deploying Istio operator
-    digest: 53d6cf235a87a7d8928e1938c82a74619791b19f092688775392b808f846cf67
+    digest: 835d9b2dc132e3eb50ab82d5021861fdc50a9d8ce4f4dc58d8cf0c009cf6e2e2
     icon: https://istio.io/latest/favicons/android-192x192.png
     keywords:
     - istio
@@ -96,10 +96,10 @@ entries:
   istiocoredns:
   - apiVersion: v1
     appVersion: "0.1"
-    created: "2020-12-02T11:09:19.865940181Z"
+    created: "2020-12-02T11:12:50.231695355Z"
     description: Istio CoreDNS provides DNS resolution for services in multicluster
       setups.
-    digest: b48ccfa7f828c2184b1823adbd7df2ceed0c4fb46efddc9eaf5a82a575ee2551
+    digest: 60eb4075f0a08af3107a054a4c50c6255a5f3d30a8beba9a32531c547a66fc01
     icon: https://istio.io/latest/favicons/android-192x192.png
     keywords:
     - istio-addon
@@ -113,9 +113,9 @@ entries:
   istiod-remote:
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2020-12-02T11:09:19.868084473Z"
+    created: "2020-12-02T11:12:50.232774695Z"
     description: Helm chart for istio control plane configuration for remote clusters
-    digest: 774647ffd1239eb96aa9045cf38650f1890a4d69e42ddf7fdf9aac307dd9e716
+    digest: 18857946d3e1487dd068dca6ed0e990ad10490df1f933de97d7af5ba655ffee3
     icon: https://istio.io/latest/favicons/android-192x192.png
     keywords:
     - istio
@@ -126,4 +126,4 @@ entries:
     urls:
     - istiod-remote-1.1.0.tgz
     version: 1.1.0
-generated: "2020-12-02T11:09:19.854834423Z"
+generated: "2020-12-02T11:12:50.221916094Z"
