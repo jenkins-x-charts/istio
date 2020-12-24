@@ -18,6 +18,8 @@ download:
 	rm -rf charts/istio-control
 	cp -r chartTemplates/ charts
 	mv downloads/istio/samples/addons/extras/prometheus-operator.yaml charts/istio-prometheus/templates
+	sed -i .bak 's/    release: istio/    release: {{ .Values.prometheusReleaseName }}/g' charts/istio-prometheus/templates/prometheus-operator.yaml
+	rm charts/istio-prometheus/templates/prometheus-operator.yaml.bak
 	curl -s https://grafana.com/api/dashboards/$(WORKLOAD_DASHBOARD)/revisions/$(DASHBOARD_REVISION)/download > charts/istio-dashboards/dashboards/istio-workload-dashboard.json
 	curl -s https://grafana.com/api/dashboards/$(SERVICE_DASHBOARD)/revisions/$(DASHBOARD_REVISION)/download > charts/istio-dashboards/dashboards/istio-service-dashboard.json
 	curl -s https://grafana.com/api/dashboards/$(MESH_DASHBOARD)/revisions/$(DASHBOARD_REVISION)/download > charts/istio-dashboards/dashboards/istio-mesh-dashboard.json
