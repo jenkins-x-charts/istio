@@ -135,15 +135,13 @@ telemetry:
       enabled: false
       logging: false
       monitoring: false
-      topology: false
+      topology: false # deprecated. setting this to true will have no effect, as this option is no longer supported.
       disableOutbound: false
       #  configOverride parts give you the ability to override the low level configuration params passed to envoy filter.
 
       configOverride: {}
       #  e.g.
-      #  enable_mesh_edges_reporting: true
       #  disable_server_access_logging: false
-      #  meshEdgesReportingDuration: 500s
       #  disable_host_header_fallback: true
     # Access Log Policy Filter Settings. This enables filtering of access logs from stackdriver.
     accessLogPolicy:
@@ -203,7 +201,7 @@ global:
   # Dev builds from prow are on gcr.io
   hub: docker.io/istio
   # Default tag for Istio images.
-  tag: 1.9.3
+  tag: 1.9.5
   # Specify image pull policy if default behavior isn't desired.
   # Default behavior: latest images will be Always else IfNotPresent.
   imagePullPolicy: ""
